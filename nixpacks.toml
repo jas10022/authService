@@ -1,0 +1,7 @@
+providers = ["python"]
+
+[variables]
+NIXPACKS_PYTHON_VERSION = "3.11"
+
+[start]
+cmd = "gunicorn auth_service:app --bind 0.0.0.0:8080"
