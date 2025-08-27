@@ -92,7 +92,7 @@ def register():
             'existing_user': True
         })
     except stripe.error.StripeError as e:
-        return jsonify({'error': 'Payment processor error'}), 500
+        return jsonify({'error': 'Payment processor error ' + e}), 500
     finally:
         conn.close()
 
